@@ -6,9 +6,9 @@ public class User {
     private String name;
     private String phoneNumber;
     private String email;
-    private NotificationType preferredNotificationType;
+    private NotificationService preferredNotificationType;
 
-    public User(String id, String name, String phoneNumber, String email, NotificationType preferredNotificationType) {
+    public User(String id, String name, String phoneNumber, String email, NotificationService preferredNotificationType) {
         this.id = id;
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -28,11 +28,11 @@ public class User {
         return email;
     }
 
-    public NotificationType getPreferredNotificationType() {
+    public NotificationService getPreferredNotificationType() {
         return preferredNotificationType;
     }
 
-    public void setPreferredNotificationType(NotificationType preferredNotificationType) {
+    public void setPreferredNotificationType(NotificationService preferredNotificationType) {
         this.preferredNotificationType = preferredNotificationType;
     }
 }

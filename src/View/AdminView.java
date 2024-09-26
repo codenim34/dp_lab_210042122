@@ -17,8 +17,8 @@ public class AdminView {
         System.out.println("1. Manage Drivers");
         System.out.println("2. Manage Riders");
         System.out.println("3. View Trip History");
-        System.out.println("4. Handle Disputes");
-        System.out.println("5. Exit");
+//        System.out.println("4. Handle Disputes");
+        System.out.println("4. Exit");
 
         System.out.print("Enter your choice: ");
         return scanner.nextInt();

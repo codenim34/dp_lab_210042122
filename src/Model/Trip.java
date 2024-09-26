@@ -29,7 +29,7 @@ public class Trip {
         // Calculate fare based on ride type
         this.fare = calculateFare();
     }
-
+    NotificationService notificationService;
     // Calculate fare based on distance and ride type
     private double calculateFare() {
         switch (rideType) {
@@ -54,16 +54,16 @@ public class Trip {
     public void assignDriver(Driver driver) {
         this.driver = driver;
         this.status = "Driver Assigned";
-        NotificationService.sendNotification(rider, "Driver has been assigned for your trip.");
-        NotificationService.sendNotification(driver, "You have been assigned a new trip.");
+        notificationService.sendNotification(rider, "Driver has been assigned for your trip.");
+        notificationService.sendNotification(driver, "You have been assigned a new trip.");
     }
 
     // Start the trip
     public void startTrip() {
         if (driver != null) {
             this.status = "In Progress";
-            NotificationService.sendNotification(rider, "Your trip has started.");
-            NotificationService.sendNotification(driver, "Trip has started.");
+            notificationService.sendNotification(rider, "Your trip has started.");
+            notificationService.sendNotification(driver, "Trip has started.");
         } else {
             System.out.println("Driver is not assigned yet.");
         }
@@ -72,8 +72,8 @@ public class Trip {
     // Complete the trip
     public void completeTrip() {
         this.status = "Completed";
-        NotificationService.sendNotification(rider, "Your trip is complete!");
-        NotificationService.sendNotification(driver, "Trip has been completed.");
+        notificationService.sendNotification(rider, "Your trip is complete!");
+        notificationService.sendNotification(driver, "Trip has been completed.");
 
         // Admin logs the trip
         admin.logTrip(this);

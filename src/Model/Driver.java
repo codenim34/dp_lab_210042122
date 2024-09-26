@@ -10,7 +10,7 @@ public class Driver extends User {
 
     // Constructor fulfilling attributes from User class and adding Driver-specific attributes
     public Driver(String id, String name, String phoneNumber, String email,
-                  NotificationType preferredNotificationType, String vehicleType,
+                  NotificationService preferredNotificationType, String vehicleType,
                   String location, double rating, boolean availability) {
         // Call to the superclass (User) constructor
         super(id, name, phoneNumber, email, preferredNotificationType);

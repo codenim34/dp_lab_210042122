@@ -9,7 +9,7 @@ public class Rider extends User {
 
     // Constructor fulfilling attributes from User class and adding Rider-specific attributes
     public Rider(String id, String name, String phoneNumber, String email,
-                 NotificationType preferredNotificationType, String location,
+                 NotificationService preferredNotificationType, String location,
                  double rating, PaymentMethod preferredPaymentMethod) {
         // Call to the superclass (User) constructor
         super(id, name, phoneNumber, email, preferredNotificationType);
